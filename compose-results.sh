@@ -4,7 +4,8 @@ do
 	rm -f ${prefix}.csv
 	for f in ${prefix}/*.dat
 	do 
-		cat $f >> ${prefix}.csv
+		DATA=`cut -f1-15 -d, ${f}` 
+		echo $DATA >> ${prefix}.csv
 	done
 done
 
