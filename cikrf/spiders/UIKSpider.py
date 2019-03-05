@@ -7,7 +7,7 @@ class UIKSpider(scrapy.Spider):
         f = open('spb-2014.list', 'r')
         urls = [x.strip() for x in f.readlines()]
        
-        elections = "mo"
+        elections = "gub"
         if elections == "gub":
             # parsing gubernator elections
             self.prefix="gub"
